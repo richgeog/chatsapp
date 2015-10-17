@@ -13,7 +13,8 @@ function config($stateProvider, $urlRouterProvider) {
       url: '/chats',
       views: {
         'tab-chats': {
-          templateUrl: 'client/templates/chats.ng.html'
+          templateUrl: 'client/templates/chats.ng.html',
+          controller: 'ChatsCtrl'
         }
       }
     });
