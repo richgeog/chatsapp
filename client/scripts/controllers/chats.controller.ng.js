@@ -50,4 +50,10 @@ function ChatsCtrl ($scope) {
       }
     }
   ];
+
+  $scope.remove = remove;
+
+  function remove (chat) {
+    $scope.chats.splice($scope.chats.indexOf(chat),1);
+  }
 }
