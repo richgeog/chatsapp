@@ -3,8 +3,7 @@ angular
   .controller('ChatsCtrl', ChatsCtrl);
 
 function ChatsCtrl ($scope) {
-
-$scope.chats = [
+  $scope.chats = [
     {
       _id: 0,
       name: 'Ethan Gonzalez',
