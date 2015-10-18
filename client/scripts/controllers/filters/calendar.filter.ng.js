@@ -3,7 +3,7 @@ angular
   .filter('calendar', calendar);
 
 function calendar () {
-  return function (item) {
+  return function (time) {
     if (! time) return;
 
     return moment(time).calendar(null, {
