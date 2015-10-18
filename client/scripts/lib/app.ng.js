@@ -1,7 +1,8 @@
 angular
   .module('Chatsapp', [
     'angular-meteor',
-    'ionic'
+    'ionic',
+    'angularMoment'
   ]);
 
 if (Meteor.isCordova) {
