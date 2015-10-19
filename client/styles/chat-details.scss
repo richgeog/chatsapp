@@ -59,7 +59,7 @@
 
   &.message-other::before {
     left: -11px;
-    background-image:  url(/message-other.png);
+    background-image: url(/message-other.png);
   }
 
   &.message-mine::before {
@@ -95,8 +95,8 @@
     margin: 0 10px;
   }
 
-  .button-seperator {
-    color: grey;
+  .buttons-seperator {
+    color: gray;
     font-size: 18px;
     line-height: 32px;
   }
