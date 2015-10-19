@@ -51,6 +51,15 @@ function config($stateProvider, $urlRouterProvider) {
           return $meteor.requireUser();
         }]
       }
+    })
+    .state('tab.settings', {
+      url: '/settings',
+      views: {
+        'tabs-settings': {
+          templateUrl: 'client/templates/settings.ng.html',
+          controller: 'SettingsCtrl'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise('tab/chats');
