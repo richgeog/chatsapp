@@ -1,8 +1,8 @@
 angular
   .module('Chatsapp')
-  .controller('LoginCtrl');
+  .controller('LoginCtrl', LoginCtrl);
 
-function LoginCtrl($scope, $state, $ionicLoading, IonicPopup, $log) {
+function LoginCtrl($scope, $state, $ionicLoading, $ionicPopup, $log) {
   $scope.data = {};
   $scope.login = login;
 
@@ -11,13 +11,13 @@ function LoginCtrl($scope, $state, $ionicLoading, IonicPopup, $log) {
       return;
     }
 
-    var confirmPopup = $IonicPopup.confirm({
+    var confirmPopup = $ionicPopup.confirm({
       title: 'Number confirmation',
       template: '<div>' + $scope.data.phone + '</div><div>Is your phone number above correct?</div>',
       cssClass: 'text-center',
       okText: 'Yes',
       okType: 'button-positive button-clear',
-      canceltText: 'edit'
+      canceltText: 'edit',
       cancelType: 'button-dark button-clear'
     });
 
@@ -45,7 +45,7 @@ function LoginCtrl($scope, $state, $ionicLoading, IonicPopup, $log) {
   function handleError(err) {
     $log.error('Login error', err);
 
-    $IonicPopup.alert({
+    $ionicPopup.alert({
       title: err.reason || 'Login failed',
       template: 'Please try again',
       okType: 'button-positive button-clear'

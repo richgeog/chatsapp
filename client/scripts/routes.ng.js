@@ -44,7 +44,7 @@ function config($stateProvider, $urlRouterProvider) {
     })
     .state('profile', {
       url: '/profile',
-      templateUrl: 'client/templates/profile.ng.html'
+      templateUrl: 'client/templates/profile.ng.html',
       controller: 'ProfileCtrl',
       resolve: {
         user: ['$meteor', function ($meteor) {
