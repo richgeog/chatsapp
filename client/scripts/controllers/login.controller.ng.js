@@ -7,7 +7,7 @@ function LoginCtrl($scope, $state, $ionicLoading, $ionicPopup, $log) {
   $scope.login = login;
 
   function login() {
-    if(_.isEmpty($scope.data.phone)) {
+    if (_.isEmpty($scope.data.phone)) {
       return;
     }
 
@@ -17,7 +17,7 @@ function LoginCtrl($scope, $state, $ionicLoading, $ionicPopup, $log) {
       cssClass: 'text-center',
       okText: 'Yes',
       okType: 'button-positive button-clear',
-      canceltText: 'edit',
+      cancelText: 'edit',
       cancelType: 'button-dark button-clear'
     });
 
@@ -27,7 +27,7 @@ function LoginCtrl($scope, $state, $ionicLoading, $ionicPopup, $log) {
       }
 
       $ionicLoading.show({
-        template: 'Sending verifaction code...'
+        template: 'Sending verifcation code...'
       });
 
       Accounts.requestPhoneVerification($scope.data.phone, function (err) {

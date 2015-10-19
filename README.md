@@ -3,7 +3,7 @@
 ### Setup
 install meteor `$ curl https://install.meteor.com/ | sh`
 
-run in bowser `meteor`
+run in browser `meteor`
 
 `meteor add-platform ios/android`
 `meteor run ios`

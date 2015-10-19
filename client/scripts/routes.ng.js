@@ -39,7 +39,7 @@ function config($stateProvider, $urlRouterProvider) {
     })
     .state('confirmation', {
       url: '/confirmation/:phone',
-      templateUrl: '/client/templates/confirmation.ng.html',
+      templateUrl: 'client/templates/confirmation.ng.html',
       controller: 'ConfirmationCtrl'
     })
     .state('profile', {
@@ -55,7 +55,7 @@ function config($stateProvider, $urlRouterProvider) {
     .state('tab.settings', {
       url: '/settings',
       views: {
-        'tabs-settings': {
+        'tab-settings': {
           templateUrl: 'client/templates/settings.ng.html',
           controller: 'SettingsCtrl'
         }

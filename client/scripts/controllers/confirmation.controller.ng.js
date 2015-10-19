@@ -3,7 +3,7 @@ angular
   .controller('ConfirmationCtrl', ConfirmationCtrl);
 
 function ConfirmationCtrl($scope, $state, $ionicPopup, $log) {
-  $scope.phone = $state.parans.phone;
+  $scope.phone = $state.params.phone;
   $scope.data = {};
   $scope.verify = verify;
 
