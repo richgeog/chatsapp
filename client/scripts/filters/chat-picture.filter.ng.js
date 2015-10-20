@@ -1,5 +1,5 @@
 angular
-  .module('Whatsapp')
+  .module('Chatsapp')
   .filter('chatPicture', chatPicture);
 
   function chatPicture () {
