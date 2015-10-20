@@ -10,7 +10,7 @@ function config($stateProvider, $urlRouterProvider) {
       templateUrl: 'client/templates/tabs.ng.html',
       resolve: {
         user: ['$meteor', function ($meteor) {
-          return $meteor.requireUser();
+          return $meteor.subscribe('chats');
         }]
       }
     })
