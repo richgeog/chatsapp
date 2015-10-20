@@ -42,7 +42,7 @@ function ChatDetailCtrl ($scope, $stateParams, $ionicScrollDelegate, $timeout, $
   }
 
   function handleError (err) {
-    $log.error('profile save erorr ', err);
+    $log.error('profile save error ', err);
     $ionicPopup.alert({
       title: err.reason || 'Save failed',
       template: 'Please try again',
