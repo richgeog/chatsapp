@@ -5,18 +5,18 @@ angular
 function ChatDetailCtrl ($scope, $stateParams, $ionicScrollDelegate, $timeout, $meteor, $ionicPopup, $log) {
   var chatId = $stateParams.chatId;
   var isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
-  $scope.chat = $scope.$meteorObject(Chats, chatId, false);
 
+  $scope.chat = $scope.$meteorObject(Chats, chatId, false);
   $scope.messages = $scope.$meteorCollection(function () {
     return Messages.find({ chatId: chatId });
   }, false);
+  $scope.data = {};
 
   $scope.$watchCollection('messages', function (oldVal, newVal) {
     var animate = oldVal.length !== newVal.length;
     $ionicScrollDelegate.$getByHandle('chatScroll').scrollBottom(animate);
   });
 
-  $scope.data = {};
   $scope.sendMessage = sendMessage;
   $scope.inputUp = inputUp;
   $scope.inputDown = inputDown;
@@ -57,6 +57,7 @@ function ChatDetailCtrl ($scope, $stateParams, $ionicScrollDelegate, $timeout, $
 
     $meteor.call('newMessage', {
       text: $scope.data.message,
+      type: 'text',
       chatId: chatId
     });
 
