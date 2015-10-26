@@ -6,12 +6,14 @@ Meteor.startup(function () {
         name: 'My friend 1'
       }
     });
+
     Accounts.createUserWithPhone({
       phone: '+972501234568',
       profile: {
         name: 'My friend 2'
       }
     });
+
     Accounts.createUserWithPhone({
       phone: '+972501234569',
       profile: {
